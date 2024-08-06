@@ -9,9 +9,14 @@ igual.addEventListener('click', () => {
     var soma = parseInt(display.innerHTML);
     for (let i = 0; i < n1.length; i++) {
         soma += n1[i]
+        if (i <= n1.length - 1) {
+            console.log('final');
+            subDisplay.innerHTML += ` ${n1[i]} = `
+        } else {
+            subDisplay.innerHTML += `${n1[i]} + `
+        }
     }
     display.innerHTML = `${soma}`
-    subDisplay.innerHTML = ''
     n1 = []
 })
 
@@ -43,6 +48,7 @@ mais.addEventListener('click', () => {
 
 C.addEventListener('click', () => {
     display.innerHTML = ''
+    subDisplay.innerHTML = ''
 })
 
 menos.addEventListener('click', () => {
